@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+
+body {
+  background-image: url("https://img2.akspic.ru/previews/6/8/6/5/3/135686/135686-zvezda-prostranstvo-nebo-galaktika-tumannost-x750.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  height: 100vh;
+}
+
+.head {
+  display: block;
+  float: top;
+  height: 10vh;
+  top: 40px;
+}
+
+.main {
+  display: block;
+  height: 70%;
+  float: top;
+  border: 5px solid #fff;
+  border-radius: 20px;
+  height: 60vh;
+  margin-top: 30px;
+  position: relative;
+}
+
+.footer {
+  display: block;
+  float: inline-end;
+  border: 5px solid #7e2bd9;
+  border-radius: 20px;
+  height: 20vh;
+  margin-top: 20px;
+  padding: 5px;
+  position: relative;
+}
+
+.shine {
+  text-align: center;
+  color: blue;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 60px;
+  color: #fff;
+  text-shadow: 10px 10px 30px #2400ff, -10px -10px 30px #7e2bd9;
+  -webkit-text-stroke: 2px #e2d5e2;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 10px;
+  height: 70px;
+  position: relative;
+  top: 0;
+  height: 10%;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+.autor {
+  text-align: center;
+  float: inline-end;
+  position: sticky;
+  margin-top: 60px;
+}
+
+.messageWrapper {
+  display: block;
+  height: 17vh;
+  position: relative;
+  display: block;
+  /*border: 5px solid black;*/
+  margin-top: 5px;
+  padding: 3px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  margin: 20px 20px 20px 20px;
+  position: relative;
+  display: block;
+  border: 1px solid white;
+  border-radius: 40px;
+}
+
+.inMessage {
+  max-height: 60px;
+  min-height: 60px;
+  max-width: 50%;
+  min-width: 50%;
+  position: relative;
+  bottom: 109px;
+  left: 100px;
+  display: block;
+  border: 5px solid #7e2bd9;
+  display: block;
+}
