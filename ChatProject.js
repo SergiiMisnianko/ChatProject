@@ -44,7 +44,7 @@ function Authorization() {
 function Main() {
   return (
     <div className="main">
-      <h1>MAIN Section</h1>;
+      <h1>MAIN SECTION</h1>;
     </div>
   );
 }
