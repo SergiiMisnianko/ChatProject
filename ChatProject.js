@@ -4,7 +4,7 @@ import "./styles.css";
 export default function App() {
   return (
     <div className="App">
-      <Chat />
+      <Chat />;
     </div>
   );
 }
@@ -12,9 +12,9 @@ export default function App() {
 function Chat() {
   return (
     <div className="parent">
-      <Header />
-      <Main />
-      <Footer />
+      <Header />;
+      <Main />;
+      <Footer />;
     </div>
   );
 }
@@ -23,7 +23,7 @@ function Header() {
   return (
     <div className="head">
       <h1 className="shine">"STARCHAT"</h1>
-      <Authorization />
+      <Authorization />;
     </div>
   );
 }
@@ -33,10 +33,10 @@ function Authorization() {
     <div className="autor">
       <button type="button" className="signin">
         sign in
-      </button>
+      </button>;
       <button type="button" className="sigout">
         sign out
-      </button>
+      </button>;
     </div>
   );
 }
@@ -44,7 +44,7 @@ function Authorization() {
 function Main() {
   return (
     <div className="main">
-      <h1>MAIN Section</h1>
+      <h1>MAIN Section</h1>;
     </div>
   );
 }
@@ -52,7 +52,7 @@ function Main() {
 function Footer() {
   return (
     <div className="footer">
-      <InputMessage />
+      <InputMessage />;
     </div>
   );
 }
@@ -66,12 +66,12 @@ function InputMessage() {
         className="avatar"
       ></img>
       ;<textarea className="inMessage"></textarea>;
-      <input
+      <button
         type="image"
         className="buttonSend"
         src="https://img.freepik.com/premium-vector/realistic-blue-ufo_118813-3084.jpg"
         alt="send the message"
-      ></input>
+      ></button>
       ;
     </div>
   );

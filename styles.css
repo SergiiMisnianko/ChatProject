@@ -111,3 +111,11 @@ h1 {
   border: 5px solid #7e2bd9;
   display: block;
 }
+
+.buttonSend {
+  width: 70px;
+  height: 70px;
+  display: block;
+  border: 1px solid white;
+  border-radius: 40px;
+}
