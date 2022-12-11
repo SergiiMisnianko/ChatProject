@@ -1,6 +1,6 @@
 import "./styles.css";
 import { Header } from "./1header/index";
-import { Main } from "./2mainsection";
+import { Main } from "./2mainsection/index";
 import{Footer} from "./3footer/index";
 /*import "./normalise.css";*/
 
