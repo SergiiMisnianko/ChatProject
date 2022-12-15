@@ -1,6 +1,6 @@
 import "./styles.css";
 import { Header } from "./1header/index";
-import { Main } from "./2mainsection/index";
+import { MainWrapper } from "./2mainsection/index";
 import{Footer} from "./3footer/index";
 /*import "./normalise.css";*/
 
@@ -16,7 +16,7 @@ function Chat() {
   return (
     <div className="parent">
       <Header />
-      <Main />;
+      <MainWrapper />;
       <Footer />;
     </div>
   );

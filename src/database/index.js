@@ -1,3 +1,9 @@
+import {createStore} from "redux";
+import {rootReducer} from "./rootReducer"
+export const store = createStore(rootReducer);
+
+
+
 let robot1 = {
     id: "0",
     avatar: "https://vraki.net/sites/default/files/inline/images/1_102.jpg",

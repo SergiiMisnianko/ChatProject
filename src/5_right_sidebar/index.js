@@ -1,11 +1,11 @@
-function Sidebar () {
+function RightSidebar () {
     return (
         <aside className="sidebarwrapper">
             <div className="sidebar">
-                <h1>Sidebar</h1>;
+                <h1>RightSidebar</h1>;
             </div>
         </aside>
     );
 }
 
-export {Sidebar}
+export {RightSidebar}
