@@ -1,8 +1,6 @@
-import "./styles.css";
 import { Header } from "./1header/index";
 import { MainWrapper } from "./2mainsection/index";
 import{Footer} from "./3footer/index";
-/*import "./normalise.css";*/
 
 export default function App() {
   return (
