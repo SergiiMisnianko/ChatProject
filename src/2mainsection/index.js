@@ -1,40 +1,50 @@
+import { connect } from "react-redux";
 import { LeftSidebar } from "../4_left_sidebar";
 import { RightSidebar } from "../5_right_sidebar";
 import { ListWrapper } from "../database/index"
 
 
-function MessageItem() {
-  let list = [{name:"Message-0"},{name:"Message-1"},{name:"Message-2"}]
-  
+function MessageItem1() {
+  let list = [{ name: "Message-0" }, { name: "Message-1" }, { name: "Message-2" }]
   return (
-    <div className="inMessage">
+    <div className="enemy-message">
       {<p>{list[0].name}</p>}
+    </div>
+  );
+}
+function MessageItem2() {
+  let list = [{ name: "Message-0" }, { name: "Message-1" }, { name: "Message-2" }]
+  return (
+    <div className="enemy-message">
       {<p>{list[1].name}</p>}
     </div>
   );
 }
-
-function SendedMessage(list) {
-
+function MessageItem3() {
+  let list = [{ name: "Message-0" }, { name: "Message-1" }, { name: "Message-2" }]
   return (
-    <li>{}</li>
+    <div className="enemy-message">
+      {<p>{list[2].name}</p>}
+    </div>
   );
 }
 
-function MainSection() {
+
+function MiddleSection() {
   return (
-    <div className="main">
-      <h1>MAIN SECTION</h1>;
-      <MessageItem />
+    <div className="middle-section">
+      <MessageItem1 />
+      <MessageItem2 />
+      <MessageItem3 />
     </div>
   );
 }
 
 function MainWrapper() {
   return (
-    <div className="mainwrapper">
+    <div className="main-wrapper">
       <LeftSidebar />
-      <MainSection />
+      <MiddleSection />
       <RightSidebar />
     </div>
   );
