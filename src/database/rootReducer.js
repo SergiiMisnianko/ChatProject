@@ -1,5 +1,5 @@
 const initialState = {
-   list: [
+    list: [
         {
             id: "0",
             avatar: "https://vraki.net/sites/default/files/inline/images/1_102.jpg",
@@ -28,5 +28,17 @@ const initialState = {
 };
 
 export function rootReducer(state = initialState, action) {
-    return state;
+    switch (action.type) {
+        case "ADD_ITEM":
+            return {
+                ...state,
+                list: [
+                    ...state.list,
+                    {
+                        done: false,
+                        text: action.payload
+                    }
+                ]
+            };
+    }
 }

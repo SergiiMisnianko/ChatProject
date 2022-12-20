@@ -1,4 +1,36 @@
+
+
+
+function Footer() {
+    return (
+        <div className="footer">
+          
+        </div>
+    );
+}
+
+export { Footer }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 import { usersarr } from "../database/index"
+
+
 
 function InputMessage() {
     return (
@@ -13,13 +45,4 @@ function InputMessage() {
         </div>
     );
 }
-
-function Footer() {
-    return (
-        <div className="footerWrapper">
-            <InputMessage />;
-        </div>
-    );
-}
-
-export { Footer }
+*/

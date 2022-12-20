@@ -1,0 +1,175 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url("../img/galaxy.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+
+
+li {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+}
+
+/*MAIN*/
+
+.chat {
+    width: 350px;
+    height: 650px;
+    background: #010101;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px #010101;
+}
+
+.container {
+    width: 330px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    padding: 20px;
+}
+
+/*HEADER*/
+
+.chat-head {
+    width: 100%;
+}
+
+.chat-head form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .chat-head form .form_sec {
+    width: 200px;
+    height: 45px;
+    padding: 0 0 0 20px;
+    border-radius: 20px;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    color: cyan;
+  }
+  .chat-head form .form_sec input {
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background: #1a1a1a;
+    color: cyan;
+  }
+  .chat-head form .form_sec .icon {
+    margin-right: 10px;
+  }
+  .chat-head form .form_sec .icon i {
+    color: cyan;
+    fill: #fff;
+  }
+  
+  .chat-head form .avatar img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    object-fit: cover;
+  }
+
+  /*Chat name*/
+
+.shine {
+    color: blue;
+    font-family: "Rubik Mono One", sans-serif;
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 10px 10px 30px #2400ff, -10px -10px 30px #7e2bd9;
+    -webkit-text-stroke: 2px #e2d5e2;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 10px;
+    height: 70px;
+    position: relative;
+    text-align: center;
+    top: 0;
+}
+
+
+/*
+.App {
+    background-color: blueviolet;
+    margin-bottom: 0;
+    color: cyan;
+}
+
+.App-Wrapper {
+    background-color: green;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    display: block;
+    height: 100px;
+    width: 100%;
+    background-color: coral;
+}
+
+.center-wrapper {
+    display: block;
+    background-color:black;
+    display: flex;
+    flex-direction: row;
+}
+
+.center {
+    display: block;
+    height: 100px;
+    width: 80%;
+    background-color: gold;
+}
+
+.left-sidebar {
+    display: block;
+    height: 100px;
+    width: 20%;
+    background-color: darkslateblue;
+
+}
+
+.right-sidebar {
+    display: block;
+    height: 100px;
+    width: 20%;
+    background-color: indigo;
+}
+
+
+.footer {
+    display: block;
+    height: 100px;
+    width: 100%;
+    background-color: khaki;
+}
+*/
