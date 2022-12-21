@@ -42,13 +42,9 @@ li {
     box-shadow: 0 5px 15px #010101;
 }
 
-.Chat-Container {
+.Chat-Container {}
 
-}
-
-.Chat-Wrapper {
-
-}
+.Chat-Wrapper {}
 
 
 /*HEADER*/
@@ -126,6 +122,9 @@ li {
     overflow-y: scroll;
     margin: 0;
     padding: 0;
+    height: 664px;
+    width: 634px;
+    border: solid#e2d5e2;
 }
 
 scroll-container {
@@ -134,11 +133,8 @@ scroll-container {
     scroll-behavior: smooth;
     margin: 10px 0 0 0px;
     flex-wrap: nowrap;
-    /*
-    width: 45vw;
-    */
     height: 70vh;
-    border: solid #e2d5e2;
+    border: solid#e2d5e2;
 }
 
 scroll-page {
@@ -157,7 +153,9 @@ scroll-page {
 
 .enemy-message-wrapper {
     display: flex;
+    /* !!!  */
     flex-direction: row-reverse;
+    /* !!!  */
     height: 100%;
     width: 100%;
     margin: 5px 0 5px 0;
@@ -175,7 +173,7 @@ scroll-page {
 
 .text-message {
     color: cyan;
-    font-size: 18px;
+    font-size: 14px;
     padding-left: 5px;
     align-self: flex-start;
 }
@@ -183,20 +181,54 @@ scroll-page {
 /*MessageForm*/
 .message-form {
     height: 80px;
-    border: solid #c4102b;
-    margin: 4px 0 4px 0px;
-    background-color:cadetblue;
+    border-radius: 20px;
+    margin: 8px 0 8px 0px;
+    color: cyan;
+    background-color: black transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.my-avatar {
+    margin: 0;
+}
+
+.message-form-send-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    color: cyan;
+    background-color: #010101;
+}
+
+.message-form-send-button:active {
+    background-color: cyan;
+    color: #010101;
+}
+
+.message-form-text-area {
+    height: 80px;
+    max-height: 80px;
+    width: 500px;
+    max-width: 4500px;
+    border: 0;
+    border-radius: 20px;
+    padding: 0 20px 0 20px;
+    margin: 2px;
+    background: black;
+    color: cyan;
+    flex-grow: 2;
 }
 
 
 /*Footer*/
 
 .footer {
-    /*
-    width: 45vw;
-    */
-    border: solid #e2d5e2;
     margin: 0 0 0 0px;
+    display: flex;
+    justify-content:center;
 }
 
 .menu ul {

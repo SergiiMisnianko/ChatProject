@@ -18,13 +18,9 @@ function SearchForm() {
         <form action="">
             <div className="form_sec">
                 <div className="icon">
-                    <SearchIcon color="cyan"/>
+                    <SearchIcon color="cyan" />
                 </div>
                 <input type="text" placeholder="Search for messages" />
-            </div>
-
-            <div className="avatar">
-                <img src="https://vraki.net/sites/default/files/mood/29_9.jpg" alt=""></img>
             </div>
         </form>
     );

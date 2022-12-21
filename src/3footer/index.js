@@ -10,7 +10,9 @@ function Footer() {
             <div class="menu">
                 <ul>
                     <li>
+                        <a href="http://www.google.co.uk">
                         <HouseIcon color="cyan"/>
+                        </a>
                     </li>
                     <li>
                         <NotificationsActiveIcon color="cyan"/>

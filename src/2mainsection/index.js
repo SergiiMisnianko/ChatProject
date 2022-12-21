@@ -60,7 +60,17 @@ export { ChatList, MessageForm }
 function MessageForm() {
   return (
     <div className="message-form">
-Hello!
+ 
+        <img className="user-avatar my-avatar" src="https://vraki.net/sites/default/files/mood/29_9.jpg"
+          alt=""></img>
+
+        <textarea name="message-value"
+          className="message-form-text-area"
+          placeholder="I`m broadcasting:">
+        </textarea>
+
+        <button className="message-form-send-button">SEND</button>
+    
     </div>
   );
 }
