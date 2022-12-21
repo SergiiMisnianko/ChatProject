@@ -1,5 +1,5 @@
 import { Header } from "./1header/index";
-import { ChatList } from "./2mainsection/index";
+import { ChatList, MessageForm} from "./2mainsection/index";
 import { Footer } from "./3footer/index";
 
 export default function App() {
@@ -16,6 +16,7 @@ function Chat() {
       <div className="Chat-Wrapper">
         <Header />
         <ChatList />
+        <MessageForm />
         <Footer />
       </div>
     </div>

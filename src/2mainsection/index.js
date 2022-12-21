@@ -6,33 +6,87 @@ import { ListWrapper } from "../database/index"
 import { ActionCreators } from "react-redux-undo";
 
 
-function ChatList () {
+function ChatList() {
   return (
     <div className="Chat-List">
-     
+      <scroll-container className="scroll-container">
+        <scroll-page className="croll-page">
+          <UserInfo />
+        </scroll-page>
+
+        <scroll-page className="scroll-page">
+          <UserInfo />
+        </scroll-page>
+
+        <scroll-page className="scroll-page">
+          <UserInfo />
+        </scroll-page>
+
+        <scroll-page className="scroll-page">
+          <UserInfo />
+        </scroll-page>
+
+        <scroll-page className="scroll-page">
+          <UserInfo />
+        </scroll-page>
+
+        <scroll-page className="scroll-page">
+          <UserInfo />
+        </scroll-page>
+
+        <scroll-page className="scroll-page">
+          <UserInfo />
+        </scroll-page>
+
+        <scroll-page className="scroll-page">
+          <UserInfo />
+        </scroll-page>
+
+        <scroll-page className="scroll-page">
+          <UserInfo />
+        </scroll-page>
+
+        <scroll-page className="scroll-page">
+          <UserInfo />
+        </scroll-page>
+
+      </scroll-container>
     </div>
   );
-}  
+}
 
-export { ChatList }
+export { ChatList, MessageForm }
 
-
-
-
-
-
-
-
-
-
+function MessageForm() {
+  return (
+    <div className="message-form">
+Hello!
+    </div>
+  );
+}
 
 
 
+function UserInfo() {
+  return (
+    <div className="enemy-message-wrapper">
+
+      <div className="user-info">
+        <img className="user-avatar" src="https://vraki.net/sites/default/files/inline/images/1_102.jpg"
+          alt=""></img>
+      </div>
+
+      <div >
+        <p className="user-name">Robot-1 broadcasting:</p>
+        <p className="text-message"> ls take a look at the imagesr gqkje hgrkqeh grkhglkqg; lkalfglkjqlghlqegql hglqrehlhglhqglkrehgqlhgl</p>
+      </div>
+
+    </div>
+  );
+}
 
 
 
-
-/*
 
 const mapState = (state) => ({
   items: state.list
@@ -58,138 +112,3 @@ const mapDispatch = (dispatch) => ({
   revert: () => dispatch(ActionCreators.undo()),
   repeat: () => dispatch(ActionCreators.redo())
 });
-
-export const Chat = connect(mapState, mapDispatch)(ChatView);
-
-
-
-
-function MiddleSection() {
-  return (
-    <div className="middle-section">
-     
-    </div>
-  );
-}
-
-function MainWrapper() {
-  return (
-    <div className="main-wrapper">
-      <LeftSidebar />
-      <MiddleSection />
-      <RightSidebar />
-    </div>
-  );
-}
-
-
-
-function ChatItem({ item, onToggle }) {
-  return (
-    <div>
-      <input type="checkbox" checked={item.done} onClick={onToggle} />
-      {item.text}
-    </div>
-  );
-}
-
-function ChatList({ list, onToggle, onDelete }) {
-  return (
-    <div className="">
-      {list.map((item, index) => (
-        <div key={index}>
-          <ChatItem item={item} onToggle={() => onToggle(item)} />
-          <button onClick={() => onDelete(item)}>x</button>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function ChatForm({ onAdd }) {
-  const [value, setValue] = useState("");
-
-  const addClickHandler = () => {
-    if (!value) {
-      return;
-    }
-
-    onAdd(value);
-    setValue("");
-  };
-
-  return (
-    <div className="messageWrapper">
-      <input
-        type="text"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        onKeyPress={(e) => {
-          if (e.key === "Enter") {
-            addClickHandler();
-          }
-        }}
-      />
-
-      <button onClick={addClickHandler}>Add item</button>
-    </div>
-  );
-}
-
-function ChatView({ items, add, toggle, remove, revert, repeat }) {
-  return (
-    <div className="App">
-      <ChatForm onAdd={add} />
-      {/* <ChatForm onAdd={(text) => addItem(text)} /> }
-      <ChatList list={items} onToggle={toggle} onDelete={remove} />
-    </div>
-  );
-}
-
-
-
-
-function MessageItem1() {
-  let list = [{ name: "Message-0" }, { name: "Message-1" }, { name: "Message-2" }]
-  return (
-    <div className="enemy-message">
-      {<p>{list[0].name}</p>}
-    </div>
-  );
-}
-function MessageItem2() {
-  let list = [{ name: "Message-0" }, { name: "Message-1" }, { name: "Message-2" }]
-  return (
-    <div className="enemy-message">
-      {<p>{list[1].name}</p>}
-    </div>
-  );
-}
-function MessageItem3() {
-  let list = [{ name: "Message-0" }, { name: "Message-1" }, { name: "Message-2" }]
-  return (
-    <div className="enemy-message">
-      {<p>{list[2].name}</p>}
-    </div>
-  );
-}
-*/
-
-
-/*
- <img src={item.avatar} alt="avatar" className="avatar"></img>
-      <p>{item.post}</p>
-
-<div className="sendedMessage">
-      {list.map((item, index) => (
-        <div key={index}>
-          <MessageItem item={item} />
-        </div>
-      ))}
-    </div>
-
-<div key={index}>
-<MessageItem item={item} />
-<button onClick={() => onDelete(item)}>x</button>
-</div>
-*/

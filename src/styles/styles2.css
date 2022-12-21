@@ -33,22 +33,23 @@ li {
 
 /*MAIN*/
 
+
 .chat {
-    width: 350px;
-    height: 650px;
+    width: 80vw;
+    height: 80vh;
     background: #010101;
     border-radius: 30px;
     box-shadow: 0 5px 15px #010101;
 }
 
-.container {
-    width: 330px;
-    margin: 0 auto;
+.Chat-Container {
+
 }
 
-.wrapper {
-    padding: 20px;
+.Chat-Wrapper {
+
 }
+
 
 /*HEADER*/
 
@@ -61,9 +62,9 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .chat-head form .form_sec {
+.chat-head form .form_sec {
     width: 200px;
     height: 45px;
     padding: 0 0 0 20px;
@@ -72,8 +73,9 @@ li {
     display: flex;
     align-items: center;
     color: cyan;
-  }
-  .chat-head form .form_sec input {
+}
+
+.chat-head form .form_sec input {
     width: 100%;
     height: 45px;
     outline: none;
@@ -81,24 +83,26 @@ li {
     border-radius: 20px;
     background: #1a1a1a;
     color: cyan;
-  }
-  .chat-head form .form_sec .icon {
+}
+
+.chat-head form .form_sec .icon {
     margin-right: 10px;
-  }
-  .chat-head form .form_sec .icon i {
+}
+
+.chat-head form .form_sec .icon i {
     color: cyan;
     fill: #fff;
-  }
-  
-  .chat-head form .avatar img {
+}
+
+.chat-head form .avatar img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     background: #1a1a1a;
     object-fit: cover;
-  }
+}
 
-  /*Chat name*/
+/*Chat name*/
 
 .shine {
     color: blue;
@@ -115,61 +119,98 @@ li {
     top: 0;
 }
 
+/* list start */
 
-/*
-.App {
-    background-color: blueviolet;
-    margin-bottom: 0;
+.Chat-list {
+    margin-top: 30px;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+scroll-container {
+    display: block;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    margin: 10px 0 0 0px;
+    flex-wrap: nowrap;
+    /*
+    width: 45vw;
+    */
+    height: 70vh;
+    border: solid #e2d5e2;
+}
+
+scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5em;
+}
+
+.user-name {
+    color: cyan;
+    font-size: 18px;
+    align-self: flex-start;
+    margin: 0 0 5px 5px;
+}
+
+.enemy-message-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    background: #1a1a1a;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+
+.text-message {
+    color: cyan;
+    font-size: 18px;
+    padding-left: 5px;
+    align-self: flex-start;
+}
+
+/*MessageForm*/
+.message-form {
+    height: 80px;
+    border: solid #c4102b;
+    margin: 4px 0 4px 0px;
+    background-color:cadetblue;
+}
+
+
+/*Footer*/
+
+.footer {
+    /*
+    width: 45vw;
+    */
+    border: solid #e2d5e2;
+    margin: 0 0 0 0px;
+}
+
+.menu ul {
+    width: 45vw;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     color: cyan;
 }
 
-.App-Wrapper {
-    background-color: green;
-    height: 100%;
-    width: 100%;
+.menu ul li {
+    cursor: pointer;
+    color: cyan;
 }
-
-.header {
-    display: block;
-    height: 100px;
-    width: 100%;
-    background-color: coral;
-}
-
-.center-wrapper {
-    display: block;
-    background-color:black;
-    display: flex;
-    flex-direction: row;
-}
-
-.center {
-    display: block;
-    height: 100px;
-    width: 80%;
-    background-color: gold;
-}
-
-.left-sidebar {
-    display: block;
-    height: 100px;
-    width: 20%;
-    background-color: darkslateblue;
-
-}
-
-.right-sidebar {
-    display: block;
-    height: 100px;
-    width: 20%;
-    background-color: indigo;
-}
-
-
-.footer {
-    display: block;
-    height: 100px;
-    width: 100%;
-    background-color: khaki;
-}
-*/

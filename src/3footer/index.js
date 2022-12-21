@@ -1,21 +1,36 @@
-
-
+import HouseIcon from '@mui/icons-material/House';
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import PhoneIcon from '@mui/icons-material/Phone';
+import GroupIcon from '@mui/icons-material/Group';
 
 function Footer() {
     return (
         <div className="footer">
-          
+            <div class="menu">
+                <ul>
+                    <li>
+                        <HouseIcon color="cyan"/>
+                    </li>
+                    <li>
+                        <NotificationsActiveIcon color="cyan"/>
+                    </li>
+                    <li>
+                        <AddCircleOutlineIcon color="cyan"/>
+                    </li>
+                    <li>
+                        <PhoneIcon color="cyan"/>
+                    </li>
+                    <li>
+                        <GroupIcon color="cyan"/>
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 }
 
 export { Footer }
-
-
-
-
-
-
 
 
 
