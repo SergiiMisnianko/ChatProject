@@ -201,6 +201,8 @@ scroll-page {
     border-radius: 20px;
     color: cyan;
     background-color: #010101;
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s;
 }
 
 .message-form-send-button:active {
@@ -242,7 +244,6 @@ scroll-page {
     color: cyan;
 }
 
-.menu ul li {
-    cursor: pointer;
+.footer-link {
     color: cyan;
 }

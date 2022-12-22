@@ -9,22 +9,30 @@ function Footer() {
         <div className="footer">
             <div class="menu">
                 <ul>
-                    <li>
-                        <a href="http://www.google.co.uk">
-                        <HouseIcon color="cyan"/>
+                    <li >
+                        <a href="http://www.google.co.uk" target="_blank" className="footer-link">
+                            <HouseIcon />
                         </a>
                     </li>
                     <li>
-                        <NotificationsActiveIcon color="cyan"/>
+                        <a href="http://www.google.co.uk" target="_blank" className="footer-link">
+                            <NotificationsActiveIcon color="cyan" />
+                        </a>
                     </li>
                     <li>
-                        <AddCircleOutlineIcon color="cyan"/>
+                        <a href="http://www.google.co.uk" target="_blank" className="footer-link">
+                            <AddCircleOutlineIcon color="cyan" />
+                        </a>
                     </li>
                     <li>
-                        <PhoneIcon color="cyan"/>
+                        <a href="http://www.google.co.uk" target="_blank" className="footer-link">
+                            <PhoneIcon color="cyan" />
+                        </a>
                     </li>
                     <li>
-                        <GroupIcon color="cyan"/>
+                        <a href="http://www.google.co.uk" target="_blank" className="footer-link">
+                            <GroupIcon color="cyan" />
+                        </a>
                     </li>
                 </ul>
             </div>
