@@ -1,53 +1,28 @@
 import { useState } from "react";
 import { connect } from "react-redux";
-import { LeftSidebar } from "../4_left_sidebar";
-import { RightSidebar } from "../5_right_sidebar";
-import { ListWrapper } from "../database/index"
+import { ListWrapper } from "../Store/index"
 import { ActionCreators } from "react-redux-undo";
 
+export { ChatList, MessageForm }
 
 function ChatList() {
   return (
     <div className="Chat-List">
       <scroll-container className="scroll-container">
         <scroll-page className="croll-page">
-          <UserInfo />
+          <EnemyMessage />
         </scroll-page>
 
         <scroll-page className="scroll-page">
-          <UserInfo />
+          <EnemyMessage />
         </scroll-page>
 
         <scroll-page className="scroll-page">
-          <UserInfo />
+          <EnemyMessage />
         </scroll-page>
 
         <scroll-page className="scroll-page">
-          <UserInfo />
-        </scroll-page>
-
-        <scroll-page className="scroll-page">
-          <UserInfo />
-        </scroll-page>
-
-        <scroll-page className="scroll-page">
-          <UserInfo />
-        </scroll-page>
-
-        <scroll-page className="scroll-page">
-          <UserInfo />
-        </scroll-page>
-
-        <scroll-page className="scroll-page">
-          <UserInfo />
-        </scroll-page>
-
-        <scroll-page className="scroll-page">
-          <UserInfo />
-        </scroll-page>
-
-        <scroll-page className="scroll-page">
-          <UserInfo />
+          <EnemyMessage />
         </scroll-page>
 
       </scroll-container>
@@ -55,7 +30,6 @@ function ChatList() {
   );
 }
 
-export { ChatList, MessageForm }
 
 function MessageForm() {
   return (
@@ -77,7 +51,7 @@ function MessageForm() {
 
 
 
-function UserInfo() {
+function EnemyMessage() {
   return (
     <div className="enemy-message-wrapper">
 

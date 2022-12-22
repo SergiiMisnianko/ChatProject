@@ -1,6 +1,6 @@
-import { Header } from "./1header/index";
-import { ChatList, MessageForm} from "./2mainsection/index";
-import { Footer } from "./3footer/index";
+import { Header } from "./ChatMainPage/MainPageHeader";
+import { ChatList, MessageForm} from "./ChatMainPage/MainPageCenter";
+import { Footer } from "./ChatMainPage/MainPageFooter";
 
 export default function App() {
   return (
