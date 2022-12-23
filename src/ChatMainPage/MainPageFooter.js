@@ -7,7 +7,7 @@ import GroupIcon from '@mui/icons-material/Group';
 function Footer() {
     return (
         <div className="footer">
-            <div class="menu">
+            <div className="menu">
                 <ul>
                     <li >
                         <a href="http://www.google.co.uk" target="_blank" className="footer-link">
