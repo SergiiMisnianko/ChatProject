@@ -1,9 +1,19 @@
 
+const initialState = {};
+  
+  export function rootReducer(state = initialState, action) {
+    return state;
+  }
+
+
+
+  /*
+
 const initialState = {
     list: [],
     addInputValue: ""
   };
-  
+
   export function rootReducer(state = initialState, action) {
     switch (action.type) {
       case "ADD_ITEM":
@@ -43,4 +53,4 @@ const initialState = {
         return state;
     }
   }
-  
+  */

@@ -4,6 +4,28 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import PhoneIcon from '@mui/icons-material/Phone';
 import GroupIcon from '@mui/icons-material/Group';
 
+export { Footer, MessageForm }
+
+
+function MessageForm() {
+    return (
+        <div className="message-form">
+
+            <img className="user-avatar my-avatar" src="https://vraki.net/sites/default/files/mood/29_9.jpg"
+                alt=""></img>
+
+            <textarea name="message-value"
+                className="message-form-text-area"
+                placeholder="I`m broadcasting:">
+            </textarea>
+
+            <button className="message-form-send-button">SEND</button>
+
+        </div>
+    );
+}
+
+
 function Footer() {
     return (
         <div className="footer">
@@ -40,4 +62,3 @@ function Footer() {
     );
 }
 
-export { Footer }
