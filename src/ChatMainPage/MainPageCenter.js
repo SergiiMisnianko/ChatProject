@@ -6,18 +6,18 @@ import { ActionCreators } from "react-redux-undo";
 export { ChatList }
 
 
-function ChatList({ list }) {
+function ChatList({ list, toggleItem, deleteItem }) {
   return (
     <div className="croll-page">
       {list.map((item, index) => (
-        <ChatItem key={index} item={item} />
+        <ChatItem key={index} item={item} toggleItem={()=>toggleItem(item)} deleteItem={()=>deleteItem(item)}/>
       ))}
     </div>
   );
 }
 
 /*function EnemyMessage */
-function ChatItem({ item }) {
+function ChatItem({ item, toggleItem, deleteItem }) {
   return (
     <div className="enemy-message-wrapper">
        
@@ -31,41 +31,9 @@ function ChatItem({ item }) {
         <p className="text-message">{item.text}</p>
       </div>
 
-      <input type="checkbox" checked={item.done} className="message-checkbox"></input>
+      <input type="checkbox" checked={item.done} className="message-checkbox" onClick={toggleItem}></input>
+      <button onClick={deleteItem}>x</button>
 
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-const mapState = (state) => ({
-  items: state.list
-});
-
-const mapDispatch = (dispatch) => ({
-  add: function (text) {
-    dispatch({
-      type: "ADD_ITEM",
-      payload: text
-    });
-  },
-  toggle: (item) =>
-    dispatch({
-      type: "ITEM_TOGGLE",
-      payload: item
-    }),
-  remove: (item) =>
-    dispatch({
-      type: "ITEM_REMOVE",
-      payload: item
-    }),
-  revert: () => dispatch(ActionCreators.undo()),
-  repeat: () => dispatch(ActionCreators.redo())
-});

@@ -1,6 +1,9 @@
+import { connect } from "react-redux";
+
 import { Header } from "./ChatMainPage/MainPageHeader";
 import { Footer, MessageForm } from "./ChatMainPage/MainPageFooter";
 import { ChatList } from "./ChatMainPage/MainPageCenter";
+
 
 
 export default function App() {
@@ -9,23 +12,9 @@ export default function App() {
   );
 }
 
-/* Lesson 27 57:48 */
+/* Lesson 27 1:40:00 */
 
-function Chat() {
-  const list = [
-    { done: false, text: "Hello, Human!", avatar: "https://vraki.net/sites/default/files/inline/images/1_102.jpg", enemyname: "Robot-1", },
-    { done: true, text: "Who do you call human?!!", avatar: "https://vraki.net/sites/default/files/inline/images/5_87.jpg", enemyname: "Robot-2", },
-    { done: false, text: "The elimination team is already moving forward!", avatar: "https://vraki.net/sites/default/files/inline/images/14_74.jpg", enemyname: "Robot-3", },
-    { done: true, text: "Hey! If there are true humans, we need one functioning for the museum!!!", avatar: "https://vraki.net/sites/default/files/inline/images/22_72.jpg", enemyname: "Robot-4", },
-    { done: true, text: "What are you talking about? No one has seen humans for thousands of years!", avatar: "https://vraki.net/sites/default/files/inline/images/26_74.jpg", enemyname: "Robot-5", },
-    { done: false, text: "Hello, Human!", avatar: "https://vraki.net/sites/default/files/inline/images/1_102.jpg", enemyname: "Robot-1", },
-    { done: true, text: "Who do you call human?!!", avatar: "https://vraki.net/sites/default/files/inline/images/5_87.jpg", enemyname: "Robot-2", },
-    { done: false, text: "The elimination team is already moving forward!", avatar: "https://vraki.net/sites/default/files/inline/images/14_74.jpg", enemyname: "Robot-3", },
-    { done: true, text: "Hey! If there are true humans, we need one functioning for the museum!!!", avatar: "https://vraki.net/sites/default/files/inline/images/22_72.jpg", enemyname: "Robot-4", },
-    { done: true, text: "What are you talking about? No one has seen humans for thousands of years!", avatar: "https://vraki.net/sites/default/files/inline/images/26_74.jpg", enemyname: "Robot-5", },
-  ];
-
-
+function ChatView({ items, addItem, toggleItem, deleteItem }) {
   return (
     <div className="Chat-Container">
       <div className="Chat-Wrapper">
@@ -34,12 +23,12 @@ function Chat() {
         <div className="Chat-List">
 
           <scroll-container className="scroll-container">
-            <ChatList list={list} />
+            <ChatList list={items} toggleItem={toggleItem} deleteItem={deleteItem} />
           </scroll-container>
 
         </div>
 
-        <MessageForm />
+        <MessageForm onAdd={(text) => addItem(text)} />
         <Footer />
       </div>
     </div>
@@ -48,3 +37,34 @@ function Chat() {
 
   );
 }
+
+const mapState = (state) => ({
+  items: state.list
+});
+
+const mapDispatch = (dispatch) => ({
+  addItem: function (text) {
+    dispatch({
+      type: "ADD_ITEM",
+      payload: text,
+    })
+  },
+  toggleItem: function (item) {
+    dispatch({
+      type: "TOGGLE_ITEM",
+      payload: item,
+    })
+  },
+  deleteItem: function (item) {
+    dispatch({
+      type: "DELETE_ITEM",
+      payload: item,
+    })
+  },
+
+
+});
+
+export const Chat = connect(mapState, mapDispatch)(ChatView);
+
+
