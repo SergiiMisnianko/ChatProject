@@ -10,6 +10,7 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import PersonIcon from '@mui/icons-material/Person';
 import Container from '@mui/material/Container';
+import Badge from '@mui/material/Badge';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -115,7 +116,9 @@ function PrimarySearchAppBar() {
                     </Search>
 
                     <IconButton>
-                        <PersonIcon color="secondary" />
+                        <Badge badgeContent={"On"} color="success">
+                            <PersonIcon color="secondary" />
+                        </Badge>
                     </IconButton>
 
                 </Container>
