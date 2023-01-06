@@ -9,6 +9,7 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
+import CancelIcon from '@mui/icons-material/Cancel';
 
 export { ChatList }
 
@@ -42,16 +43,13 @@ function ChatItem({ item, toggleItem, deleteItem }) {
       </Box>
 
       <input type="checkbox" checked={item.done} className="message-checkbox" onClick={toggleItem}></input>
-      
+
       <Button variant="contained"
-                endIcon={<SendIcon />}
-                color="secondary"
-                onClick={deleteItem}
-                size="large"
-                sx={{ width: 80, height: 80 }}
-            >
-                Send
-            </Button>
+        endIcon={<CancelIcon />}
+        color="secondary"
+        onClick={deleteItem}
+      >
+      </Button>
     </Box>
   );
 }

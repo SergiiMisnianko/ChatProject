@@ -46,7 +46,7 @@ function MessageForm({ onAdd }) {
                         id="outlined-multiline-flexible"
                         label="I`m broadcasting:"
                         multiline
-                        maxRows={4}
+                        maxRows={2}
                         value={value}
                         onChange={(e) => setValue(e.target.value)}
                         onKeyPress={(e) => {
