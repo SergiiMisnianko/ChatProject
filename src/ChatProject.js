@@ -1,7 +1,8 @@
 import { connect } from "react-redux";
 
 import { Header } from "./ChatMainPage/MainPageHeader";
-import { Footer, MessageForm } from "./ChatMainPage/MainPageFooter";
+import { Footer } from "./ChatMainPage/MainPageFooter";
+import {MessageForm } from "./ChatMainPage/MessageForm"
 import { ChatList } from "./ChatMainPage/MainPageCenter";
 
 
@@ -29,6 +30,7 @@ function ChatView({ items, addItem, toggleItem, deleteItem }) {
         </div>
 
         <MessageForm onAdd={(text) => addItem(text)} />
+
         <Footer />
       </div>
     </div>

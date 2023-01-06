@@ -56,7 +56,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 function PrimarySearchAppBar() {
 
     return (
-        <Container sx={{ flexGrow: 1 }}>
+        <Container sx={{ flexGrow: 1 }} >
             <AppBar position="static" sx={{
                 fdisplay: 'flex',
                 alignItems: 'center',
