@@ -2,8 +2,9 @@ import { connect } from "react-redux";
 
 import { Header } from "./ChatMainPage/MainPageHeader";
 import { Footer } from "./ChatMainPage/MainPageFooter";
-import {MessageForm } from "./ChatMainPage/MessageForm"
+import { MessageForm } from "./ChatMainPage/MessageForm"
 import { ChatList } from "./ChatMainPage/MainPageCenter";
+import { Box, Grid, } from "@mui/material";
 
 
 
@@ -17,26 +18,17 @@ export default function App() {
 
 function ChatView({ items, addItem, toggleItem, deleteItem }) {
   return (
-    <div className="Chat-Container">
-      <div className="Chat-Wrapper">
-        <Header />
+    <Grid>
+      <Header />
 
-        <div className="Chat-List">
+      <Box style={{ maxHeight: 550, overflow: 'auto'}} color="primary" background="prymary">
+        <ChatList list={items} toggleItem={toggleItem} deleteItem={deleteItem} />
+      </Box>
 
-          <scroll-container className="scroll-container">
-            <ChatList list={items} toggleItem={toggleItem} deleteItem={deleteItem} />
-          </scroll-container>
+      <MessageForm onAdd={(text) => addItem(text)} />
 
-        </div>
-
-        <MessageForm onAdd={(text) => addItem(text)} />
-
-        <Footer />
-      </div>
-    </div>
-
-
-
+      <Footer />
+    </Grid>
   );
 }
 

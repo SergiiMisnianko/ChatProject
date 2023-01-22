@@ -28,6 +28,14 @@ const theme = createTheme({
     h1: {
       fontFamily: 'Rubik Mono One',
     },
+    subtitle1: {
+      fontSize: 12,
+      fontStyle: 'italic'
+    },
+    h6: {
+      fontSize: 14,
+    }
+
   },
   shape: {
     borderRadius: 20,

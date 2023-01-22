@@ -1,15 +1,11 @@
-import { useState } from "react";
-import { connect } from "react-redux";
-import { ListWrapper } from "../StoreDatabase/index"
-import { ActionCreators } from "react-redux-undo";
-
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/Send';
 import CancelIcon from '@mui/icons-material/Cancel';
+import { Grid } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import Checkbox from '@mui/material/Checkbox'
 
 export { ChatList }
 
@@ -27,9 +23,13 @@ function ChatList({ list, toggleItem, deleteItem }) {
 /*function EnemyMessage */
 function ChatItem({ item, toggleItem, deleteItem }) {
   return (
-    <Box className="enemy-message-wrapper">
+    <Grid
+      display="flex"
+      background="main"
+      container direction="row-reverse"
+    >
 
-      <Box className="user-info">
+      <Box>
         <Avatar
           alt="Robot"
           src={item.avatar}
@@ -37,19 +37,26 @@ function ChatItem({ item, toggleItem, deleteItem }) {
         />
       </Box>
 
-      <Box className="enemy-message-text">
-        <Typography className="user-name">{item.enemyname} broadcasting: </Typography>
-        <Typography className="text-message">{item.text}</Typography>
-      </Box>
+      <Grid sx={{ flexGrow: 1 }} >
+        <Typography variant="subtitle1">{item.enemyname} broadcasting: </Typography>
 
-      <input type="checkbox" checked={item.done} className="message-checkbox" onClick={toggleItem}></input>
+        <Typography variant="h6">{item.text}</Typography>
+      </Grid>
 
-      <Button variant="contained"
-        endIcon={<CancelIcon />}
-        color="secondary"
-        onClick={deleteItem}
-      >
-      </Button>
-    </Box>
+      <IconButton color="secondary" onClick={deleteItem}>
+        <CancelIcon />
+      </IconButton>
+
+    </Grid>
   );
 }
+
+/*
+<Checkbox
+        label="Label"
+        defaultChecked
+        checked={item.done}
+        onClick={toggleItem}
+        color="secondary"
+      />
+*/
