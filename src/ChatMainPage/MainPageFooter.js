@@ -1,11 +1,7 @@
 import * as React from 'react';
-import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import MoreIcon from '@mui/icons-material/MoreVert';
 import CopyrightIcon from '@mui/icons-material/Copyright';
 import Typography from '@mui/material/Typography';
 
