@@ -1,16 +1,14 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
-import PersonIcon from '@mui/icons-material/Person';
 import Container from '@mui/material/Container';
-import Badge from '@mui/material/Badge';
+import SpeakerNotesOffIcon from '@mui/icons-material/SpeakerNotesOff';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -53,8 +51,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-function PrimarySearchAppBar() {
-
+function PrimarySearchAppBar(deleteItem) {
     return (
         <Container sx={{ flexGrow: 1 }} >
             <AppBar position="static" sx={{
@@ -82,7 +79,6 @@ function PrimarySearchAppBar() {
                                 textShadow: '10px 10px 30px #2400ff, -10px -10px 30px #7e2bd9',
                             }
                         }}
-
                     > STARCHAT
                     </Typography>
 
@@ -115,10 +111,11 @@ function PrimarySearchAppBar() {
                         />
                     </Search>
 
-                    <IconButton>
-                        <Badge badgeContent={"On"} color="success">
-                            <PersonIcon color="secondary" />
-                        </Badge>
+                    <IconButton color="secondary" onClick={deleteItem}>
+                        <SpeakerNotesOffIcon  />
+                        <Typography variant="h6" >
+                            Delete all messages
+                        </Typography>
                     </IconButton>
 
                 </Container>
@@ -128,10 +125,4 @@ function PrimarySearchAppBar() {
 }
 
 
-function Header() {
-    return (
-        <PrimarySearchAppBar />
-    );
-}
-
-export { Header }
+export { PrimarySearchAppBar }

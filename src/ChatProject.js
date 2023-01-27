@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 
-import { Header } from "./ChatMainPage/MainPageHeader";
+import { PrimarySearchAppBar } from "./ChatMainPage/MainPageHeader";
 import { Footer } from "./ChatMainPage/MainPageFooter";
 import { MessageForm } from "./ChatMainPage/MessageForm"
 import { ChatList } from "./ChatMainPage/MainPageCenter";
@@ -16,13 +16,16 @@ export default function App() {
 
 /* Lesson 27 1:40:00 */
 
-function ChatView({ items, addItem, toggleItem, deleteItem }) {
+function ChatView({ items, addItem, toggleItem, deleteItem, deleteAll }) {
   return (
     <Grid>
-      <Header />
+      <PrimarySearchAppBar />
 
       <Box style={{ maxHeight: 550, overflow: 'auto'}} color="primary" background="prymary">
-        <ChatList list={items} toggleItem={toggleItem} deleteItem={deleteItem} />
+        <ChatList list={items} 
+        toggleItem={toggleItem} 
+        deleteItem={deleteItem}
+        deleteAll={deleteAll} />
       </Box>
 
       <MessageForm onAdd={(text) => addItem(text)} />
@@ -53,6 +56,11 @@ const mapDispatch = (dispatch) => ({
     dispatch({
       type: "DELETE_ITEM",
       payload: item,
+    })
+  },
+  deleteAll: function () {
+    dispatch({
+      type: "DELETE_ALL",
     })
   },
 
