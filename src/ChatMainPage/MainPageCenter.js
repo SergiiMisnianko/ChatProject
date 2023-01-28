@@ -20,6 +20,7 @@ function ChatList({ list, toggleItem, deleteItem, deleteAll }) {
         deleteItem={() => deleteItem(item)} 
         deleteAll={() => deleteAll()}/>
       ))}
+      
     </Box>
   );
 }

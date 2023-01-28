@@ -9,6 +9,7 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import Container from '@mui/material/Container';
 import SpeakerNotesOffIcon from '@mui/icons-material/SpeakerNotesOff';
+import Button from '@mui/material/Button';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -51,7 +52,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-function PrimarySearchAppBar(deleteItem) {
+export function PrimarySearchAppBar() {
+       const test = () => {console.log("test")}
     return (
         <Container sx={{ flexGrow: 1 }} >
             <AppBar position="static" sx={{
@@ -83,6 +85,7 @@ function PrimarySearchAppBar(deleteItem) {
                     </Typography>
 
                 </Toolbar>
+
                 <Container sx={{
                     display: {
                         display: 'flex',
@@ -111,18 +114,24 @@ function PrimarySearchAppBar(deleteItem) {
                         />
                     </Search>
 
-                    <IconButton color="secondary" onClick={deleteItem}>
-                        <SpeakerNotesOffIcon  />
-                        <Typography variant="h6" >
-                            Delete all messages
-                        </Typography>
-                    </IconButton>
-
+                    <Button variant="contained"
+                        endIcon={<SpeakerNotesOffIcon  />}
+                        color="secondary"
+                        onClick={test}
+                        size="large"
+                    >Delete all messages
+                     </Button>
                 </Container>
             </AppBar>
         </Container>
     );
 }
 
-
-export { PrimarySearchAppBar }
+/*
+                   <IconButton color="secondary" onClick={test}>
+                        <SpeakerNotesOffIcon  />
+                        <Typography variant="h6" >
+                            Delete all messages
+                        </Typography>
+                    </IconButton>
+*/

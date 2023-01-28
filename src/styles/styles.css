@@ -54,10 +54,6 @@ li {
     box-shadow: 0 5px 15px #010101;
 }
 
-.Chat-Container {}
-
-.Chat-Wrapper {}
-
 
 /*HEADER*/
 
@@ -141,7 +137,7 @@ li {
 scroll-container {
     display: block;
     overflow-y: scroll;
-    scroll-behavior: smooth;
+    /*scroll-behavior: smooth;*/
     margin: 10px 0 0 0px;
     flex-wrap: nowrap;
     height: 70vh;
