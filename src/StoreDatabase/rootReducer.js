@@ -1,7 +1,12 @@
 
 const initialState = {
   list: [
-    { done: false, text: "Hello, Human!", avatar: "https://vraki.net/sites/default/files/inline/images/5_87.jpg", enemyname: "Robot-1", },
+    { done: false, 
+      text: "Hello, Human!", 
+      avatar: "https://vraki.net/sites/default/files/inline/images/5_87.jpg", 
+      enemyname: "Robot-1", 
+      order: "row-reverse",
+    },
   ],
 };
 
@@ -15,7 +20,11 @@ export function rootReducer(state = initialState, action) {
         list: [
           ...state.list,
           {
-            done: false, text: action.payload, avatar: "https://vraki.net/sites/default/files/mood/29_9.jpg", enemyname: "I`m",
+            done: false, 
+            text: action.payload, 
+            avatar: "https://vraki.net/sites/default/files/mood/29_9.jpg", 
+            enemyname: "I`m",
+            order: "row",
           },
         ]
       };

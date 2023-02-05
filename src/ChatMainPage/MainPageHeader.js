@@ -52,8 +52,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-export function PrimarySearchAppBar() {
-       const test = () => {console.log("test")}
+export function PrimarySearchAppBar(list, deleteAll) {
+       const test = () => {list.deleteAll()}
+
     return (
         <Container sx={{ flexGrow: 1 }} >
             <AppBar position="static" sx={{
