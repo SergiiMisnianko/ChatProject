@@ -19,7 +19,7 @@ export default function App() {
 function ChatView({ items, addItem, toggleItem, deleteItem, deleteAll }) {
   return (
     <Grid>
-      <PrimarySearchAppBar />
+      <PrimarySearchAppBar deleteAll={deleteAll}/>
 
       <Box style={{ maxHeight: 550, overflow: 'auto'}} color="primary" background="prymary">
         <ChatList list={items} 
