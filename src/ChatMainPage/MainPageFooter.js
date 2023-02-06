@@ -24,7 +24,7 @@ export default function BottomAppBar() {
                 color="primary"
                 sx={{ top: 'auto', bottom: 0, mt: 5 }}>
 
-                <IconButton color="secondary" >
+                <IconButton color="secondary">
                     <CopyrightIcon />  
                     <Typography variant="h6">Sergii Misnianko</Typography>
                 </IconButton>

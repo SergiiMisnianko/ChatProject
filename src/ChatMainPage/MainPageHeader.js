@@ -58,11 +58,11 @@ export function PrimarySearchAppBar(list, deleteAll) {
     return (
         <Container sx={{ flexGrow: 1 }} >
             <AppBar position="static" sx={{
-                fdisplay: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: '20px',
-                backgroundColor: 'transparent',
+                fdisplay: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: "20px",
+                backgroundColor: "transparent",
             }} >
 
                 <Toolbar>
@@ -89,9 +89,9 @@ export function PrimarySearchAppBar(list, deleteAll) {
 
                 <Container sx={{
                     display: {
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
                     }
                 }}>
                     <IconButton

@@ -44,7 +44,7 @@ function ChatItem({ item, toggleItem, deleteItem, }) {
         <Typography variant="h6">{item.text}</Typography>
       </Grid>
 
-      <IconButton color="secondary" onClick={deleteItem}>
+      <IconButton color="primary" onClick={deleteItem}>
         <CancelIcon />
       </IconButton>
 

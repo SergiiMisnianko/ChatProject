@@ -20,6 +20,7 @@ function MessageForm({ onAdd }) {
     };
 
     return (
+
         <Box sx={{ top: 'auto', bottom: 70, mt: 5 }}
             display="flex"
             position="fixed"

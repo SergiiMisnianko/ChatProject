@@ -2,12 +2,31 @@
 const initialState = {
   list: [
     { done: false, 
-      text: "Hello, Human!", 
+      text: "We welcome humans!", 
       avatar: "https://vraki.net/sites/default/files/inline/images/5_87.jpg", 
       enemyname: "Robot-1", 
       order: "row-reverse",
     },
   ],
+
+  room2: [
+    { done: false, 
+      text: "We will destroy humans!", 
+      avatar: "https://vraki.net/sites/default/files/inline/images/10_80.jpg", 
+      enemyname: "Robot-2", 
+      order: "row-reverse",
+    },
+  ],
+
+  room3: [
+    { done: false, 
+      text: "We will study humans!", 
+      avatar: "https://vraki.net/sites/default/files/inline/images/22_72.jpg", 
+      enemyname: "Robot-3", 
+      order: "row-reverse",
+    },
+  ],
+
 };
 
 

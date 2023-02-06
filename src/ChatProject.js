@@ -4,6 +4,9 @@ import { Footer } from "./ChatMainPage/MainPageFooter";
 import { MessageForm } from "./ChatMainPage/MessageForm"
 import { ChatList } from "./ChatMainPage/MainPageCenter";
 import { Box, Grid, } from "@mui/material";
+import Stack from '@mui/material/Stack';
+import LinearProgress from '@mui/material/LinearProgress';
+
 
 
 
@@ -18,6 +21,10 @@ function ChatView({ items, addItem, toggleItem, deleteItem, deleteAll }) {
   return (
     <Grid>
       <PrimarySearchAppBar list={items} deleteAll={deleteAll}/>
+     
+      <Stack sx={{ width: '100%' }} spacing={2}>
+      <LinearProgress color="secondary" />
+      </Stack>
 
       <Box style={{ maxHeight: 550, overflow: 'auto'}} color="primary" background="prymary">
         
