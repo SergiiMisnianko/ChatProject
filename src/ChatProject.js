@@ -12,7 +12,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 
 export default function App() {
   return (
-    <Chat />
+    <Chat color="primary" background="prymary"/>
   );
 }
 
@@ -23,7 +23,7 @@ function ChatView({ items, addItem, toggleItem, deleteItem, deleteAll }) {
       <PrimarySearchAppBar list={items} deleteAll={deleteAll}/>
      
       <Stack sx={{ width: '100%' }} spacing={2}>
-      <LinearProgress color="secondary" />
+      <LinearProgress color="secondary" sx={{ mt: 1, }}/>
       </Stack>
 
       <Box style={{ maxHeight: 550, overflow: 'auto'}} color="primary" background="prymary">

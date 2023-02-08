@@ -36,7 +36,7 @@ function MessageForm({ onAdd }) {
             <Box
                 component="form"
                 sx={{
-                    '& .MuiTextField-root': { m: 1, width: '64ch' },
+                    '& .MuiTextField-root': { m: 1, width: '67ch' },
                 }}
                 noValidate
                 autoComplete="off"

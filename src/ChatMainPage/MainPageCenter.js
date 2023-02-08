@@ -11,6 +11,7 @@ export { ChatList }
 
 
 function ChatList({ list, toggleItem, deleteItem, }) {
+  
   return (
     <Box>
       {list.map((item, index) => (
