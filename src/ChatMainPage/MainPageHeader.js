@@ -12,13 +12,14 @@ import Stack from '@mui/material/Stack';
 
 function AvatarChips() {
     const handleClick1 = () => {
-        console.info('You clicked the Butler.');
+        console.log('You clicked the Butler.');
+
       };
       const handleClick2 = () => {
-        console.info('You clicked the Terminator.');
+        console.log('You clicked the Terminator.');
       };
       const handleClick3 = () => {
-        console.info('You clicked the Scientist.');
+        console.log('You clicked the Scientist.');
       };
    
     return (
@@ -56,8 +57,10 @@ function AvatarChips() {
   }
 
 
-export function PrimarySearchAppBar( list ) {
+export function PrimarySearchAppBar( list, room ) {
     const deleteAll = () => {list.deleteAll()}
+
+    const changeRoom = () => {changeRoom(room)}
 
     return (
         <Container sx={{ flexGrow: 1 }} >

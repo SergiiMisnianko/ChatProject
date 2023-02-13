@@ -17,10 +17,10 @@ export default function App() {
 }
 
 
-function ChatView({ items, addItem, toggleItem, deleteItem, deleteAll }) {
+function ChatView({ items, addItem, toggleItem, deleteItem, deleteAll, changeRoom }) {
   return (
     <Grid>
-      <PrimarySearchAppBar list={items} deleteAll={deleteAll}/>
+      <PrimarySearchAppBar list={items} deleteAll={deleteAll} changeRoom={changeRoom}/>
      
       <Stack sx={{ width: '100%' }} spacing={2}>
       <LinearProgress color="secondary" sx={{ mt: 1, }}/>
@@ -46,6 +46,13 @@ const mapState = (state) => ({
   items: state.list
 });
 
+const changeRoom = room => {
+  return {
+    type: 'CHANGE_ROOM',
+    room
+  };
+};
+
 const mapDispatch = (dispatch) => ({
   addItem: function (text) {
     dispatch({
@@ -70,6 +77,12 @@ const mapDispatch = (dispatch) => ({
       type: "DELETE_ALL",
     })
   },
+  changeRoom: function (room) {
+    dispatch({
+      type: "CHANGE_ROOM",
+      payload: room,
+    })
+  }
 
 
 });

@@ -1,5 +1,8 @@
 
 const initialState = {
+ 
+  activeRoom: "room2",
+
   list: [
     { done: false, 
       text: "We welcome humans!", 
@@ -72,6 +75,12 @@ export function rootReducer(state = initialState, action) {
         return {
           ...state,
           list: []
+        };
+    
+      case 'CHANGE_ROOM':
+        return {
+          ...state,
+          activeRoom: action.room
         };
 
     default:
