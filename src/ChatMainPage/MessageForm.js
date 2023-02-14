@@ -9,7 +9,7 @@ import Avatar from '@mui/material/Avatar';
 
 export { MessageForm }
 
-function MessageForm({ onAdd }) {
+function MessageForm({ onAdd, }) {
     const [value, setValue] = useState("");
     const addClickHendler = () => {
         if (!value) {
