@@ -1,7 +1,7 @@
 export const ACTION_TYPES = {
     ADD_ITEM: "ADD_ITEM",
     DELETE_ITEM: "DELETE_ITEM",
-    REMOVE_ALL: "DELETE_ALL",
+    DELETE_ALL: "DELETE_ALL",
     CHANGE_ROOM: "CHANGE_ROOM",
   };
   
@@ -16,10 +16,10 @@ export const ACTION_TYPES = {
   });
   
   export const removeAllAction = () => ({
-    type: ACTION_TYPES.REMOVE_ALL
+    type: ACTION_TYPES.DELETE_ALL
   });
   
   export const changeRoomAction = (room) => ({
-    type: ACTION_TYPES.ADD_ITEM,
+    type: ACTION_TYPES.CHANGE_ROOM,
     payload: room
   });
