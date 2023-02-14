@@ -1,3 +1,6 @@
+import { combineReducers, createStore } from "redux";
+import { ACTION_TYPES } from "./actions";
+
 
 const initialState = {
  
@@ -31,6 +34,26 @@ const initialState = {
   ],
 
 };
+
+
+function todoListReducer(state = todoListInitial, action) {
+  switch (action.type) {
+    case ACTION_TYPES.ADD_ITEM:
+      return [...state.todoList, action.payload];
+
+    case ACTION_TYPES.REMOVE_ITEM:
+      return state.todoList.filter((item) => item !== action.payload);
+
+    case ACTION_TYPES.REMOVE_ALL:
+      return [];
+
+    default:
+      return state;
+  }
+}
+
+
+
 
 
 export function rootReducer(state = initialState, action) {

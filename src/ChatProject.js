@@ -46,13 +46,6 @@ const mapState = (state) => ({
   items: state.list
 });
 
-const changeRoom = room => {
-  return {
-    type: 'CHANGE_ROOM',
-    room
-  };
-};
-
 const mapDispatch = (dispatch) => ({
   addItem: function (text) {
     dispatch({
